@@ -22,6 +22,6 @@
 @property(readonly) NSUInteger numberOfNewResults;
 
 -(void)markAllRead:(id)sender;
--(void)search:(id)sender;
+-(void)refresh:(id)sender;
 
 @end

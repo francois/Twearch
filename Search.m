@@ -28,7 +28,7 @@
   [super dealloc];
 }
 
--(void)search:(id) sender {
+-(void)refresh:(id) sender {
 }
 
 -(void)markAllRead:(id)sender {
