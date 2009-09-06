@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F1B49661054027300C61B13 /* SearchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B49651054027300C61B13 /* SearchesController.m */; };
+		0F1B49FA1054109000C61B13 /* JSON in Resources */ = {isa = PBXBuildFile; fileRef = 0F1B49EB1054109000C61B13 /* JSON */; };
 		0F805695105300DB00804118 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F805694105300DB00804118 /* Search.m */; };
 		0F8056981053015C00804118 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8056971053015C00804118 /* Result.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
@@ -20,6 +21,7 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F1B49641054027300C61B13 /* SearchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchesController.h; sourceTree = "<group>"; };
 		0F1B49651054027300C61B13 /* SearchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchesController.m; sourceTree = "<group>"; };
+		0F1B49EB1054109000C61B13 /* JSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JSON; sourceTree = "<group>"; };
 		0F805693105300DB00804118 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		0F805694105300DB00804118 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		0F8056961053015C00804118 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0F1B49EB1054109000C61B13 /* JSON */,
 				0F8056961053015C00804118 /* Result.h */,
 				0F8056971053015C00804118 /* Result.m */,
 				0F805693105300DB00804118 /* Search.h */,
@@ -171,6 +174,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				0F1B49FA1054109000C61B13 /* JSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +219,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -232,6 +240,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Frameworks\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Twearch_Prefix.pch;
