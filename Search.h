@@ -23,5 +23,16 @@
 
 -(void)markAllRead:(id)sender;
 -(void)refresh:(id)sender;
+-(void)cancel:(id)sender;
+
+/* NSURLConnection delegate protocol declaration */
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection;
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+
+// To inform us of redirects
+-(NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse;
 
 @end
