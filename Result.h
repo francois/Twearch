@@ -12,11 +12,13 @@
 @interface Result : NSObject {
   NSUInteger tweetId;
   NSURL *avatarURL;
-  NSString *from, *to, *message;
+  NSString *from, *message;
 }
 
 @property(readonly) NSUInteger tweetId;
 @property(retain) NSURL *avatarURL;
-@property(retain) NSString *from, *to, *message;
+@property(retain) NSString *from, *message;
+
+-(id) initWithDictionary:(NSDictionary *)dict;
 
 @end
