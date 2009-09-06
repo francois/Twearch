@@ -16,7 +16,7 @@
 
 -(id)init {
   if (self = [super init]) {
-    [self setQuery: @""];
+    [self setQuery: @"enter Twitter query here"];
     [self setQuerying:NO];
     [self setResults: [[NSMutableArray alloc] init]];
   }

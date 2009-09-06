@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1B49661054027300C61B13 /* SearchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B49651054027300C61B13 /* SearchesController.m */; };
 		0F805695105300DB00804118 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F805694105300DB00804118 /* Search.m */; };
 		0F8056981053015C00804118 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8056971053015C00804118 /* Result.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
@@ -17,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F1B49641054027300C61B13 /* SearchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchesController.h; sourceTree = "<group>"; };
+		0F1B49651054027300C61B13 /* SearchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchesController.m; sourceTree = "<group>"; };
 		0F805693105300DB00804118 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		0F805694105300DB00804118 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		0F8056961053015C00804118 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 				0F8056971053015C00804118 /* Result.m */,
 				0F805693105300DB00804118 /* Search.h */,
 				0F805694105300DB00804118 /* Search.m */,
+				0F1B49641054027300C61B13 /* SearchesController.h */,
+				0F1B49651054027300C61B13 /* SearchesController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				0F805695105300DB00804118 /* Search.m in Sources */,
 				0F8056981053015C00804118 /* Result.m in Sources */,
+				0F1B49661054027300C61B13 /* SearchesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
