@@ -1569,18 +1569,18 @@
 											<reference key="NSCornerView" ref="150198472"/>
 											<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 										</object>
-										<object class="NSButton" id="720767194">
+										<object class="NSButton" id="563420026">
 											<reference key="NSNextResponder" ref="367625990"/>
 											<int key="NSvFlags">289</int>
 											<string key="NSFrame">{{284, -4}, {96, 32}}</string>
 											<reference key="NSSuperview" ref="367625990"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="NSButtonCell" key="NSCell" id="135479447">
+											<object class="NSButtonCell" key="NSCell" id="698082397">
 												<int key="NSCellFlags">67239424</int>
 												<int key="NSCellFlags2">134217728</int>
 												<string key="NSContents">Refresh</string>
 												<reference key="NSSupport" ref="67896980"/>
-												<reference key="NSControlView" ref="720767194"/>
+												<reference key="NSControlView" ref="563420026"/>
 												<int key="NSButtonFlags">-2038284033</int>
 												<int key="NSButtonFlags2">129</int>
 												<string key="NSAlternateContents"/>
@@ -1607,7 +1607,7 @@
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<string key="NSFrameAutosaveName">MainFrame</string>
 			</object>
-			<object class="NSCustomObject" id="342429437">
+			<object class="NSCustomObject" id="165221618">
 				<string key="NSClassName">SearchesController</string>
 			</object>
 			<object class="NSTableView" id="98790352">
@@ -2287,7 +2287,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">add:</string>
-						<reference key="source" ref="342429437"/>
+						<reference key="source" ref="165221618"/>
 						<reference key="destination" ref="605339879"/>
 					</object>
 					<int key="connectionID">498</int>
@@ -2295,7 +2295,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">remove:</string>
-						<reference key="source" ref="342429437"/>
+						<reference key="source" ref="165221618"/>
 						<reference key="destination" ref="46457964"/>
 					</object>
 					<int key="connectionID">499</int>
@@ -2303,7 +2303,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">controller</string>
-						<reference key="source" ref="342429437"/>
+						<reference key="source" ref="165221618"/>
 						<reference key="destination" ref="153214809"/>
 					</object>
 					<int key="connectionID">500</int>
@@ -2311,7 +2311,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">table</string>
-						<reference key="source" ref="342429437"/>
+						<reference key="source" ref="165221618"/>
 						<reference key="destination" ref="845159787"/>
 					</object>
 					<int key="connectionID">501</int>
@@ -2399,10 +2399,30 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">refresh:</string>
-						<reference key="source" ref="342429437"/>
-						<reference key="destination" ref="720767194"/>
+						<reference key="source" ref="165221618"/>
+						<reference key="destination" ref="563420026"/>
 					</object>
 					<int key="connectionID">511</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">enabled: selection.querying</string>
+						<reference key="source" ref="563420026"/>
+						<reference key="destination" ref="153214809"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="563420026"/>
+							<reference key="NSDestination" ref="153214809"/>
+							<string key="NSLabel">enabled: selection.querying</string>
+							<string key="NSBinding">enabled</string>
+							<string key="NSKeyPath">selection.querying</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSValueTransformerName</string>
+								<string key="NS.object.0">NSNegateBoolean</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">514</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3330,7 +3350,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="22965340"/>
-							<reference ref="720767194"/>
+							<reference ref="563420026"/>
 						</object>
 						<reference key="parent" ref="399079220"/>
 					</object>
@@ -3527,22 +3547,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">496</int>
-						<reference key="object" ref="342429437"/>
+						<reference key="object" ref="165221618"/>
 						<reference key="parent" ref="1049"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">509</int>
-						<reference key="object" ref="720767194"/>
+						<reference key="object" ref="563420026"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="135479447"/>
+							<reference ref="698082397"/>
 						</object>
 						<reference key="parent" ref="367625990"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">510</int>
-						<reference key="object" ref="135479447"/>
-						<reference key="parent" ref="720767194"/>
+						<reference key="object" ref="698082397"/>
+						<reference key="parent" ref="563420026"/>
 					</object>
 				</object>
 			</object>
@@ -4093,7 +4113,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">511</int>
+			<int key="maxID">514</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
