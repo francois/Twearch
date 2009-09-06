@@ -8,7 +8,7 @@
 
 #import "Search.h"
 #import "Result.h"
-
+#import "JSON/JSON.h"
 
 @implementation Search
 
@@ -117,14 +117,25 @@ NSMutableData *incomingData;
 
 // Will be called once per buffer full
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-  NSLog(@"connection:%@ didReceiveData:%@", connection, data);
+  NSLog(@"connection:%@ didReceiveData:%ud", connection, [data length]);
   [incomingData appendData:data];
 }
 
 // The data is completely received only here, not before
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection {
   NSLog(@"connectionDidFinishLoading:%@", connection);
-  NSLog(@"incomingData: %@", [[[NSString alloc] initWithData:incomingData encoding:NSUTF8StringEncoding] autorelease]);
+  NSString *jsonSource = [[NSString alloc] initWithData:incomingData encoding:NSUTF8StringEncoding];
+  NSDictionary *json = [jsonSource JSONValue];
+  NSLog(jsonSource);
+  [jsonSource dealloc], jsonSource = nil;
+
+  NSArray *arr = [json objectForKey:@"results"];
+  for (NSDictionary *dict in arr) {
+    NSLog(@"result: %@", dict);
+  }
+
+  [arr dealloc], arr = nil;
+  [json dealloc], json = nil;
   [self cleanupConnection];
 }
 
