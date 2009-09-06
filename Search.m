@@ -21,7 +21,9 @@ NSMutableData *incomingData;
   if (self = [super init]) {
     [self setQuery: @"enter Twitter query here"];
     [self setQuerying:NO];
-    [self setResults: [[NSMutableArray alloc] init]];
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    [self setResults: arr];
+    [arr release];
   }
   
   return self;
