@@ -24,7 +24,7 @@
 }
 
 -(void)refresh:(id)sender {
-  for (Search *search in [controller selection]) {
+  for (Search *search in [controller selectedObjects]) {
     [search refresh:sender];
   }
 }
