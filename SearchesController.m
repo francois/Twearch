@@ -23,4 +23,10 @@
   [controller remove:sender];
 }
 
+-(void)refresh:(id)sender {
+  for (Search *search in [controller selection]) {
+    [search refresh:sender];
+  }
+}
+
 @end

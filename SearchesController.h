@@ -16,5 +16,6 @@
 
 -(void)add:(id)sender;
 -(void)remove:(id)sender;
+-(void)refresh:(id)sender;
 
 @end
