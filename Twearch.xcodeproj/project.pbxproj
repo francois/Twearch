@@ -71,7 +71,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0F1B4B5C1054462C00C61B13 /* CSJSON */,
 				0F8056961053015C00804118 /* Result.h */,
 				0F8056971053015C00804118 /* Result.m */,
 				0F805693105300DB00804118 /* Search.h */,
@@ -119,6 +118,14 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		0FEBFB19105555D00018AC08 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0F1B4B5C1054462C00C61B13 /* CSJSON */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +155,7 @@
 		29B97314FDCFA39411CA2CEA /* Twearch */ = {
 			isa = PBXGroup;
 			children = (
+				0FEBFB19105555D00018AC08 /* Libraries */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
