@@ -141,7 +141,7 @@ NSMutableData *incomingData;
     [self setResults:arr];
     [arr release];
   } else {
-    NSLog(@"Error: %@", error);
+    NSLog(@"Error parsing JSON returned from Twitter: %@", error);
   }
 
   [self cleanupConnection];
