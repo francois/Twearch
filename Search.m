@@ -30,15 +30,22 @@ NSMutableData *incomingData;
 }
 
 -(void) cleanupConnection {
+  NSLog(@"Search#cleanupConnection");
   if (connection) {
+    NSLog(@"Cleaning up connection");
     [connection release];
     connection = nil;
   }
   
   if (incomingData) {
+    NSLog(@"Cleaning up incomingData");
     [incomingData release];
     incomingData = nil;
   }
+  
+  // We're done querying for now, so inform the view
+  NSLog(@"#setQuerying:NO");
+  [self setQuerying:NO];
 }
 
 -(void)dealloc {
@@ -72,6 +79,7 @@ NSMutableData *incomingData;
   if ([self isQuerying]) return;
 
   [self cleanupConnection];
+  [self setQuerying:YES];
   
   connection   = [[NSURLConnection alloc] initWithRequest:[self queryRequest] delegate:self];
 }
@@ -82,9 +90,6 @@ NSMutableData *incomingData;
     [connection cancel];
 
     [self cleanupConnection];
-
-    // We're done querying for now, so inform the view
-    [self setQuerying:NO];
   }
 }
 
@@ -110,7 +115,12 @@ NSMutableData *incomingData;
     }
   }
   
-  return [results count] - [results indexOfObject:lastSeenTweet];
+  if (lastSeenTweet) {
+    return [results count] - [results indexOfObject:lastSeenTweet];
+  } else {
+    // We couldn't find the last tweet, so let's say all results are new
+    return [results count];
+  }
 }
 
 // May be called multiple times, and if we are, we must trash previously received data and start anew
@@ -133,12 +143,15 @@ NSMutableData *incomingData;
   NSError *error;
   NSDictionary *json = [[CJSONDeserializer deserializer] deserializeAsDictionary:incomingData error:&error];
   if (json) {
+    NSLog(@"Instantiating new results array");
     NSMutableArray *arr = [[NSMutableArray alloc] init];
     for (NSDictionary *dict in [json objectForKey:@"results"]) {
       Result *result = [[Result alloc] initWithDictionary:dict];
       [arr addObject:result];
     }
+    NSLog(@"Setting new results");
     [self setResults:arr];
+    NSLog(@"arr retainCount: %d", [arr retainCount]);
     [arr release];
   } else {
     NSLog(@"Error parsing JSON returned from Twitter: %@", error);
