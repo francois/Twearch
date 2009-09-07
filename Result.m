@@ -17,15 +17,22 @@
 @synthesize message;
 
 -(id) initWithDictionary:(NSDictionary *)dict {
-  NSLog(@"%@", dict);
   if (self = [super init]) {
-    tweetId = [[dict objectForKey:@"id"] unsignedIntegerValue];
-    avatarURL = [dict objectForKey:@"profile_image_url"];
-    from = [dict objectForKey:@"from_user"];
-    message = [dict objectForKey:@"text"];
+    tweetId =   [[dict objectForKey:@"id"] unsignedIntegerValue];
+    
+    [self setAvatarURL: [[NSURL alloc] initWithString: [dict objectForKey:@"profile_image_url"]]];
+    [self setFrom:      [dict objectForKey:@"from_user"]];
+    [self setMessage:   [dict objectForKey:@"text"]];
   }
   
   return self;
+}
+
+-(void)dealloc {
+  [self setAvatarURL: nil];
+  [self setFrom: nil];
+  [self setMessage: nil];
+  [super dealloc];
 }
 
 @end
